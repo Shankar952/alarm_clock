@@ -1,0 +1,9 @@
+Analysis & Synthesis Status : Successful - Wed Jul 08 11:13:36 2020
+Quartus Prime Version : 17.1.0 Build 590 10/25/2017 SJ Lite Edition
+Revision Name : alarm_clock_top
+Top-level Entity Name : alarm_clock_top
+Family : MAX V
+Total logic elements : 178
+Total pins : 42
+Total virtual pins : 0
+UFM blocks : 0 / 1 ( 0 % )

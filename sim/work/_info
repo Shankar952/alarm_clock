@@ -1,0 +1,199 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+dC:/intelFPGA_lite/17.1
+valarm_clock_top
+!s110 1594621259
+!i10b 1
+!s100 F@5eAPNTZ`TVTObfJ[US@2
+IRf7M`6_YBB_]DODVoIIYd2
+Z0 VDg1SIo80bB@j0V0VzS_@n1
+Z1 dC:/Users/Shankar/Downloads/maven/Project_Solution/sim
+Z2 w1524785024
+8C:/Users/Shankar/Downloads/maven/Project_Solution/rtl/alarm_clock_top.v
+FC:/Users/Shankar/Downloads/maven/Project_Solution/rtl/alarm_clock_top.v
+Z3 L0 29
+Z4 OV;L;10.5b;63
+r1
+!s85 0
+31
+Z5 !s108 1594621259.000000
+!s107 C:/Users/Shankar/Downloads/maven/Project_Solution/rtl/alarm_clock_top.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/Users/Shankar/Downloads/maven/Project_Solution/rtl/alarm_clock_top.v|
+!i113 1
+Z6 o-work work
+Z7 tCvgOpt 0
+valarm_reg
+Z8 !s110 1594621260
+!i10b 1
+!s100 oAY:ibU4CVK:Nze?T7aIJ2
+I[kE]Ye[]ZKRnD47UUzM9K1
+R0
+R1
+R2
+8C:/Users/Shankar/Downloads/maven/Project_Solution/rtl/alarm_reg.v
+FC:/Users/Shankar/Downloads/maven/Project_Solution/rtl/alarm_reg.v
+R3
+R4
+r1
+!s85 0
+31
+R5
+!s107 C:/Users/Shankar/Downloads/maven/Project_Solution/rtl/alarm_reg.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/Users/Shankar/Downloads/maven/Project_Solution/rtl/alarm_reg.v|
+!i113 1
+R6
+R7
+vcounter
+R8
+!i10b 1
+!s100 O^2knkXn_50;8e^jn:kA;0
+IjnmEP[>B>X<SANbLPmk[U0
+R0
+R1
+R2
+8C:/Users/Shankar/Downloads/maven/Project_Solution/rtl/counter.v
+FC:/Users/Shankar/Downloads/maven/Project_Solution/rtl/counter.v
+R3
+R4
+r1
+!s85 0
+31
+Z9 !s108 1594621260.000000
+!s107 C:/Users/Shankar/Downloads/maven/Project_Solution/rtl/counter.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/Users/Shankar/Downloads/maven/Project_Solution/rtl/counter.v|
+!i113 1
+R6
+R7
+vfsm
+R8
+!i10b 1
+!s100 1HJWJRiQ01n@<43HM5N;B0
+Ik@1OdM8mYhiEC4J2H160k2
+R0
+R1
+R2
+8C:/Users/Shankar/Downloads/maven/Project_Solution/rtl/fsm.v
+FC:/Users/Shankar/Downloads/maven/Project_Solution/rtl/fsm.v
+Z10 L0 30
+R4
+r1
+!s85 0
+31
+R9
+!s107 C:/Users/Shankar/Downloads/maven/Project_Solution/rtl/fsm.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/Users/Shankar/Downloads/maven/Project_Solution/rtl/fsm.v|
+!i113 1
+R6
+R7
+vkeyreg
+Z11 !s110 1594621261
+!i10b 1
+!s100 o?>zeHEj`?aL4DCb0TM@K2
+I[gV;66nlohbb]_EgD5`ma2
+R0
+R1
+R2
+8C:/Users/Shankar/Downloads/maven/Project_Solution/rtl/keyreg.v
+FC:/Users/Shankar/Downloads/maven/Project_Solution/rtl/keyreg.v
+R3
+R4
+r1
+!s85 0
+31
+R9
+!s107 C:/Users/Shankar/Downloads/maven/Project_Solution/rtl/keyreg.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/Users/Shankar/Downloads/maven/Project_Solution/rtl/keyreg.v|
+!i113 1
+R6
+R7
+vlcd_driver
+R11
+!i10b 1
+!s100 0m6TI_`MmDRki^kD^eIi42
+I@@72z=YLo<JnhoMEKP]2M3
+R0
+R1
+R2
+8C:/Users/Shankar/Downloads/maven/Project_Solution/rtl/lcd_driver.v
+FC:/Users/Shankar/Downloads/maven/Project_Solution/rtl/lcd_driver.v
+R3
+R4
+r1
+!s85 0
+31
+!s108 1594621261.000000
+!s107 C:/Users/Shankar/Downloads/maven/Project_Solution/rtl/lcd_driver.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/Users/Shankar/Downloads/maven/Project_Solution/rtl/lcd_driver.v|
+!i113 1
+R6
+R7
+vlcd_driver_4
+Z12 !s110 1594621262
+!i10b 1
+!s100 d<kUFCj74dz4QM=>hJdBm2
+ILa_Kek^=ES_[EL?04GNkS1
+R0
+R1
+R2
+8C:/Users/Shankar/Downloads/maven/Project_Solution/rtl/lcd_driver_4.v
+FC:/Users/Shankar/Downloads/maven/Project_Solution/rtl/lcd_driver_4.v
+R3
+R4
+r1
+!s85 0
+31
+Z13 !s108 1594621262.000000
+!s107 C:/Users/Shankar/Downloads/maven/Project_Solution/rtl/lcd_driver_4.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/Users/Shankar/Downloads/maven/Project_Solution/rtl/lcd_driver_4.v|
+!i113 1
+R6
+R7
+vtb_alarm_clock
+!s110 1594621263
+!i10b 1
+!s100 =kzLP0A<c<fB;>V8jN5Q<3
+Ie9I>M=8XeXffO;CmX9kM[0
+R0
+R1
+w1524785022
+8C:/Users/Shankar/Downloads/maven/Project_Solution/tb/tb_alarm_clock.v
+FC:/Users/Shankar/Downloads/maven/Project_Solution/tb/tb_alarm_clock.v
+R3
+R4
+r1
+!s85 0
+31
+!s108 1594621263.000000
+!s107 C:/Users/Shankar/Downloads/maven/Project_Solution/tb/tb_alarm_clock.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/Users/Shankar/Downloads/maven/Project_Solution/tb/tb_alarm_clock.v|
+!i113 1
+R6
+R7
+vtimegen
+R12
+!i10b 1
+!s100 m9Q^fGQEkJ0lZV_GI;8^L1
+I7jT>fk;N4jj3FSInJh6ez2
+R0
+R1
+R2
+8C:/Users/Shankar/Downloads/maven/Project_Solution/rtl/timegen.v
+FC:/Users/Shankar/Downloads/maven/Project_Solution/rtl/timegen.v
+R10
+R4
+r1
+!s85 0
+31
+R13
+!s107 C:/Users/Shankar/Downloads/maven/Project_Solution/rtl/timegen.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/Users/Shankar/Downloads/maven/Project_Solution/rtl/timegen.v|
+!i113 1
+R6
+R7

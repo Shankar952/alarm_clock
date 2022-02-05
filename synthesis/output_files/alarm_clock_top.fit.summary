@@ -1,0 +1,11 @@
+Fitter Status : Successful - Wed Jul 08 11:14:30 2020
+Quartus Prime Version : 17.1.0 Build 590 10/25/2017 SJ Lite Edition
+Revision Name : alarm_clock_top
+Top-level Entity Name : alarm_clock_top
+Family : MAX V
+Device : 5M240ZM100C4
+Timing Models : Final
+Total logic elements : 145 / 240 ( 60 % )
+Total pins : 42 / 79 ( 53 % )
+Total virtual pins : 0
+UFM blocks : 0 / 1 ( 0 % )

@@ -1,0 +1,538 @@
+TimeQuest Timing Analyzer report for alarm_clock_top
+Wed Jul 08 11:15:02 2020
+Quartus Prime Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. TimeQuest Timing Analyzer Summary
+  3. Parallel Compilation
+  4. Clocks
+  5. Fmax Summary
+  6. Setup Summary
+  7. Hold Summary
+  8. Recovery Summary
+  9. Removal Summary
+ 10. Minimum Pulse Width Summary
+ 11. Setup: 'clock'
+ 12. Hold: 'clock'
+ 13. Setup Transfers
+ 14. Hold Transfers
+ 15. Report TCCS
+ 16. Report RSKM
+ 17. Unconstrained Paths Summary
+ 18. Clock Status Summary
+ 19. Unconstrained Input Ports
+ 20. Unconstrained Output Ports
+ 21. Unconstrained Input Ports
+ 22. Unconstrained Output Ports
+ 23. TimeQuest Timing Analyzer Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 2017  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel FPGA IP License Agreement, or other applicable license
+agreement, including, without limitation, that your use is for
+the sole purpose of programming logic devices manufactured by
+Intel and sold by Intel or its authorized distributors.  Please
+refer to the applicable agreement for further details.
+
+
+
++-----------------------------------------------------------------------------+
+; TimeQuest Timing Analyzer Summary                                           ;
++-----------------------+-----------------------------------------------------+
+; Quartus Prime Version ; Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition ;
+; Timing Analyzer       ; TimeQuest                                           ;
+; Revision Name         ; alarm_clock_top                                     ;
+; Device Family         ; MAX V                                               ;
+; Device Name           ; 5M240ZM100C4                                        ;
+; Timing Models         ; Final                                               ;
+; Delay Model           ; Slow Model                                          ;
+; Rise/Fall Delays      ; Unavailable                                         ;
++-----------------------+-----------------------------------------------------+
+
+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 4           ;
+; Maximum allowed            ; 2           ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 1           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
++----------------------------+-------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Clocks                                                                                                                                                                            ;
++------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+-----------+
+; Clock Name ; Type ; Period ; Frequency  ; Rise  ; Fall  ; Duty Cycle ; Divide by ; Multiply by ; Phase ; Offset ; Edge List ; Edge Shift ; Inverted ; Master ; Source ; Targets   ;
++------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+-----------+
+; clock      ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { clock } ;
++------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+-----------+
+
+
++--------------------------------------------------+
+; Fmax Summary                                     ;
++------------+-----------------+------------+------+
+; Fmax       ; Restricted Fmax ; Clock Name ; Note ;
++------------+-----------------+------------+------+
+; 103.44 MHz ; 103.44 MHz      ; clock      ;      ;
++------------+-----------------+------------+------+
+This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
+
+
++--------------------------------+
+; Setup Summary                  ;
++-------+--------+---------------+
+; Clock ; Slack  ; End Point TNS ;
++-------+--------+---------------+
+; clock ; -8.667 ; -461.448      ;
++-------+--------+---------------+
+
+
++-------------------------------+
+; Hold Summary                  ;
++-------+-------+---------------+
+; Clock ; Slack ; End Point TNS ;
++-------+-------+---------------+
+; clock ; 1.733 ; 0.000         ;
++-------+-------+---------------+
+
+
+--------------------
+; Recovery Summary ;
+--------------------
+No paths to report.
+
+
+-------------------
+; Removal Summary ;
+-------------------
+No paths to report.
+
+
++--------------------------------+
+; Minimum Pulse Width Summary    ;
++-------+--------+---------------+
+; Clock ; Slack  ; End Point TNS ;
++-------+--------+---------------+
+; clock ; -2.289 ; -2.289        ;
++-------+--------+---------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Setup: 'clock'                                                                                                                                              ;
++--------+---------------------------------------+--------------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack  ; From Node                             ; To Node                              ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++--------+---------------------------------------+--------------------------------------+--------------+-------------+--------------+------------+------------+
+; -8.667 ; counter:count1|current_time_ls_min[2] ; counter:count1|current_time_ms_hr[1] ; clock        ; clock       ; 1.000        ; 0.000      ; 9.407      ;
+; -8.646 ; timegen:tgen1|count[5]                ; timegen:tgen1|count[7]               ; clock        ; clock       ; 1.000        ; 0.000      ; 9.386      ;
+; -8.646 ; timegen:tgen1|count[5]                ; timegen:tgen1|count[10]              ; clock        ; clock       ; 1.000        ; 0.000      ; 9.386      ;
+; -8.646 ; timegen:tgen1|count[5]                ; timegen:tgen1|count[8]               ; clock        ; clock       ; 1.000        ; 0.000      ; 9.386      ;
+; -8.646 ; timegen:tgen1|count[5]                ; timegen:tgen1|count[9]               ; clock        ; clock       ; 1.000        ; 0.000      ; 9.386      ;
+; -8.646 ; timegen:tgen1|count[5]                ; timegen:tgen1|count[11]              ; clock        ; clock       ; 1.000        ; 0.000      ; 9.386      ;
+; -8.646 ; timegen:tgen1|count[5]                ; timegen:tgen1|count[12]              ; clock        ; clock       ; 1.000        ; 0.000      ; 9.386      ;
+; -8.646 ; timegen:tgen1|count[5]                ; timegen:tgen1|count[13]              ; clock        ; clock       ; 1.000        ; 0.000      ; 9.386      ;
+; -8.624 ; counter:count1|current_time_ms_min[2] ; counter:count1|current_time_ms_hr[1] ; clock        ; clock       ; 1.000        ; 0.000      ; 9.364      ;
+; -8.619 ; timegen:tgen1|count[10]               ; timegen:tgen1|count[7]               ; clock        ; clock       ; 1.000        ; 0.000      ; 9.359      ;
+; -8.619 ; timegen:tgen1|count[10]               ; timegen:tgen1|count[10]              ; clock        ; clock       ; 1.000        ; 0.000      ; 9.359      ;
+; -8.619 ; timegen:tgen1|count[10]               ; timegen:tgen1|count[8]               ; clock        ; clock       ; 1.000        ; 0.000      ; 9.359      ;
+; -8.619 ; timegen:tgen1|count[10]               ; timegen:tgen1|count[9]               ; clock        ; clock       ; 1.000        ; 0.000      ; 9.359      ;
+; -8.619 ; timegen:tgen1|count[10]               ; timegen:tgen1|count[11]              ; clock        ; clock       ; 1.000        ; 0.000      ; 9.359      ;
+; -8.619 ; timegen:tgen1|count[10]               ; timegen:tgen1|count[12]              ; clock        ; clock       ; 1.000        ; 0.000      ; 9.359      ;
+; -8.619 ; timegen:tgen1|count[10]               ; timegen:tgen1|count[13]              ; clock        ; clock       ; 1.000        ; 0.000      ; 9.359      ;
+; -8.553 ; counter:count1|current_time_ls_min[2] ; counter:count1|current_time_ms_hr[0] ; clock        ; clock       ; 1.000        ; 0.000      ; 9.293      ;
+; -8.552 ; counter:count1|current_time_ls_min[2] ; counter:count1|current_time_ms_hr[3] ; clock        ; clock       ; 1.000        ; 0.000      ; 9.292      ;
+; -8.547 ; counter:count1|current_time_ls_min[2] ; counter:count1|current_time_ms_hr[2] ; clock        ; clock       ; 1.000        ; 0.000      ; 9.287      ;
+; -8.514 ; timegen:tgen1|count[7]                ; timegen:tgen1|count[7]               ; clock        ; clock       ; 1.000        ; 0.000      ; 9.254      ;
+; -8.514 ; timegen:tgen1|count[7]                ; timegen:tgen1|count[10]              ; clock        ; clock       ; 1.000        ; 0.000      ; 9.254      ;
+; -8.514 ; timegen:tgen1|count[7]                ; timegen:tgen1|count[8]               ; clock        ; clock       ; 1.000        ; 0.000      ; 9.254      ;
+; -8.514 ; timegen:tgen1|count[7]                ; timegen:tgen1|count[9]               ; clock        ; clock       ; 1.000        ; 0.000      ; 9.254      ;
+; -8.514 ; timegen:tgen1|count[7]                ; timegen:tgen1|count[11]              ; clock        ; clock       ; 1.000        ; 0.000      ; 9.254      ;
+; -8.514 ; timegen:tgen1|count[7]                ; timegen:tgen1|count[12]              ; clock        ; clock       ; 1.000        ; 0.000      ; 9.254      ;
+; -8.514 ; timegen:tgen1|count[7]                ; timegen:tgen1|count[13]              ; clock        ; clock       ; 1.000        ; 0.000      ; 9.254      ;
+; -8.510 ; counter:count1|current_time_ms_min[2] ; counter:count1|current_time_ms_hr[0] ; clock        ; clock       ; 1.000        ; 0.000      ; 9.250      ;
+; -8.509 ; counter:count1|current_time_ms_min[2] ; counter:count1|current_time_ms_hr[3] ; clock        ; clock       ; 1.000        ; 0.000      ; 9.249      ;
+; -8.504 ; counter:count1|current_time_ms_min[2] ; counter:count1|current_time_ms_hr[2] ; clock        ; clock       ; 1.000        ; 0.000      ; 9.244      ;
+; -8.476 ; timegen:tgen1|count[1]                ; timegen:tgen1|count[7]               ; clock        ; clock       ; 1.000        ; 0.000      ; 9.216      ;
+; -8.476 ; timegen:tgen1|count[1]                ; timegen:tgen1|count[10]              ; clock        ; clock       ; 1.000        ; 0.000      ; 9.216      ;
+; -8.476 ; timegen:tgen1|count[1]                ; timegen:tgen1|count[8]               ; clock        ; clock       ; 1.000        ; 0.000      ; 9.216      ;
+; -8.476 ; timegen:tgen1|count[1]                ; timegen:tgen1|count[9]               ; clock        ; clock       ; 1.000        ; 0.000      ; 9.216      ;
+; -8.476 ; timegen:tgen1|count[1]                ; timegen:tgen1|count[11]              ; clock        ; clock       ; 1.000        ; 0.000      ; 9.216      ;
+; -8.476 ; timegen:tgen1|count[1]                ; timegen:tgen1|count[12]              ; clock        ; clock       ; 1.000        ; 0.000      ; 9.216      ;
+; -8.476 ; timegen:tgen1|count[1]                ; timegen:tgen1|count[13]              ; clock        ; clock       ; 1.000        ; 0.000      ; 9.216      ;
+; -8.451 ; timegen:tgen1|count[4]                ; timegen:tgen1|count[7]               ; clock        ; clock       ; 1.000        ; 0.000      ; 9.191      ;
+; -8.451 ; timegen:tgen1|count[4]                ; timegen:tgen1|count[10]              ; clock        ; clock       ; 1.000        ; 0.000      ; 9.191      ;
+; -8.451 ; timegen:tgen1|count[4]                ; timegen:tgen1|count[8]               ; clock        ; clock       ; 1.000        ; 0.000      ; 9.191      ;
+; -8.451 ; timegen:tgen1|count[4]                ; timegen:tgen1|count[9]               ; clock        ; clock       ; 1.000        ; 0.000      ; 9.191      ;
+; -8.451 ; timegen:tgen1|count[4]                ; timegen:tgen1|count[11]              ; clock        ; clock       ; 1.000        ; 0.000      ; 9.191      ;
+; -8.451 ; timegen:tgen1|count[4]                ; timegen:tgen1|count[12]              ; clock        ; clock       ; 1.000        ; 0.000      ; 9.191      ;
+; -8.451 ; timegen:tgen1|count[4]                ; timegen:tgen1|count[13]              ; clock        ; clock       ; 1.000        ; 0.000      ; 9.191      ;
+; -8.439 ; counter:count1|current_time_ls_min[3] ; counter:count1|current_time_ms_hr[1] ; clock        ; clock       ; 1.000        ; 0.000      ; 9.179      ;
+; -8.411 ; timegen:tgen1|count[11]               ; timegen:tgen1|count[7]               ; clock        ; clock       ; 1.000        ; 0.000      ; 9.151      ;
+; -8.411 ; timegen:tgen1|count[11]               ; timegen:tgen1|count[10]              ; clock        ; clock       ; 1.000        ; 0.000      ; 9.151      ;
+; -8.411 ; timegen:tgen1|count[11]               ; timegen:tgen1|count[8]               ; clock        ; clock       ; 1.000        ; 0.000      ; 9.151      ;
+; -8.411 ; timegen:tgen1|count[11]               ; timegen:tgen1|count[9]               ; clock        ; clock       ; 1.000        ; 0.000      ; 9.151      ;
+; -8.411 ; timegen:tgen1|count[11]               ; timegen:tgen1|count[11]              ; clock        ; clock       ; 1.000        ; 0.000      ; 9.151      ;
+; -8.411 ; timegen:tgen1|count[11]               ; timegen:tgen1|count[12]              ; clock        ; clock       ; 1.000        ; 0.000      ; 9.151      ;
+; -8.411 ; timegen:tgen1|count[11]               ; timegen:tgen1|count[13]              ; clock        ; clock       ; 1.000        ; 0.000      ; 9.151      ;
+; -8.392 ; counter:count1|current_time_ms_min[3] ; counter:count1|current_time_ms_hr[1] ; clock        ; clock       ; 1.000        ; 0.000      ; 9.132      ;
+; -8.325 ; counter:count1|current_time_ls_min[3] ; counter:count1|current_time_ms_hr[0] ; clock        ; clock       ; 1.000        ; 0.000      ; 9.065      ;
+; -8.324 ; counter:count1|current_time_ls_min[3] ; counter:count1|current_time_ms_hr[3] ; clock        ; clock       ; 1.000        ; 0.000      ; 9.064      ;
+; -8.319 ; counter:count1|current_time_ls_min[3] ; counter:count1|current_time_ms_hr[2] ; clock        ; clock       ; 1.000        ; 0.000      ; 9.059      ;
+; -8.278 ; counter:count1|current_time_ms_min[3] ; counter:count1|current_time_ms_hr[0] ; clock        ; clock       ; 1.000        ; 0.000      ; 9.018      ;
+; -8.277 ; counter:count1|current_time_ms_min[3] ; counter:count1|current_time_ms_hr[3] ; clock        ; clock       ; 1.000        ; 0.000      ; 9.017      ;
+; -8.272 ; counter:count1|current_time_ms_min[3] ; counter:count1|current_time_ms_hr[2] ; clock        ; clock       ; 1.000        ; 0.000      ; 9.012      ;
+; -8.169 ; counter:count1|current_time_ls_min[0] ; counter:count1|current_time_ms_hr[1] ; clock        ; clock       ; 1.000        ; 0.000      ; 8.909      ;
+; -8.127 ; counter:count1|current_time_ms_min[1] ; counter:count1|current_time_ms_hr[1] ; clock        ; clock       ; 1.000        ; 0.000      ; 8.867      ;
+; -8.080 ; timegen:tgen1|count[9]                ; timegen:tgen1|count[7]               ; clock        ; clock       ; 1.000        ; 0.000      ; 8.820      ;
+; -8.080 ; timegen:tgen1|count[9]                ; timegen:tgen1|count[10]              ; clock        ; clock       ; 1.000        ; 0.000      ; 8.820      ;
+; -8.080 ; timegen:tgen1|count[9]                ; timegen:tgen1|count[8]               ; clock        ; clock       ; 1.000        ; 0.000      ; 8.820      ;
+; -8.080 ; timegen:tgen1|count[9]                ; timegen:tgen1|count[9]               ; clock        ; clock       ; 1.000        ; 0.000      ; 8.820      ;
+; -8.080 ; timegen:tgen1|count[9]                ; timegen:tgen1|count[11]              ; clock        ; clock       ; 1.000        ; 0.000      ; 8.820      ;
+; -8.080 ; timegen:tgen1|count[9]                ; timegen:tgen1|count[12]              ; clock        ; clock       ; 1.000        ; 0.000      ; 8.820      ;
+; -8.080 ; timegen:tgen1|count[9]                ; timegen:tgen1|count[13]              ; clock        ; clock       ; 1.000        ; 0.000      ; 8.820      ;
+; -8.077 ; timegen:tgen1|count[0]                ; timegen:tgen1|count[7]               ; clock        ; clock       ; 1.000        ; 0.000      ; 8.817      ;
+; -8.077 ; timegen:tgen1|count[0]                ; timegen:tgen1|count[10]              ; clock        ; clock       ; 1.000        ; 0.000      ; 8.817      ;
+; -8.077 ; timegen:tgen1|count[0]                ; timegen:tgen1|count[8]               ; clock        ; clock       ; 1.000        ; 0.000      ; 8.817      ;
+; -8.077 ; timegen:tgen1|count[0]                ; timegen:tgen1|count[9]               ; clock        ; clock       ; 1.000        ; 0.000      ; 8.817      ;
+; -8.077 ; timegen:tgen1|count[0]                ; timegen:tgen1|count[11]              ; clock        ; clock       ; 1.000        ; 0.000      ; 8.817      ;
+; -8.077 ; timegen:tgen1|count[0]                ; timegen:tgen1|count[12]              ; clock        ; clock       ; 1.000        ; 0.000      ; 8.817      ;
+; -8.077 ; timegen:tgen1|count[0]                ; timegen:tgen1|count[13]              ; clock        ; clock       ; 1.000        ; 0.000      ; 8.817      ;
+; -8.055 ; counter:count1|current_time_ls_min[0] ; counter:count1|current_time_ms_hr[0] ; clock        ; clock       ; 1.000        ; 0.000      ; 8.795      ;
+; -8.054 ; counter:count1|current_time_ls_min[0] ; counter:count1|current_time_ms_hr[3] ; clock        ; clock       ; 1.000        ; 0.000      ; 8.794      ;
+; -8.049 ; counter:count1|current_time_ls_min[0] ; counter:count1|current_time_ms_hr[2] ; clock        ; clock       ; 1.000        ; 0.000      ; 8.789      ;
+; -8.013 ; counter:count1|current_time_ms_min[1] ; counter:count1|current_time_ms_hr[0] ; clock        ; clock       ; 1.000        ; 0.000      ; 8.753      ;
+; -8.012 ; counter:count1|current_time_ms_min[1] ; counter:count1|current_time_ms_hr[3] ; clock        ; clock       ; 1.000        ; 0.000      ; 8.752      ;
+; -8.007 ; counter:count1|current_time_ms_min[1] ; counter:count1|current_time_ms_hr[2] ; clock        ; clock       ; 1.000        ; 0.000      ; 8.747      ;
+; -8.001 ; timegen:tgen1|count[5]                ; timegen:tgen1|count[0]               ; clock        ; clock       ; 1.000        ; 0.000      ; 8.741      ;
+; -8.001 ; timegen:tgen1|count[5]                ; timegen:tgen1|count[1]               ; clock        ; clock       ; 1.000        ; 0.000      ; 8.741      ;
+; -8.001 ; timegen:tgen1|count[5]                ; timegen:tgen1|count[2]               ; clock        ; clock       ; 1.000        ; 0.000      ; 8.741      ;
+; -8.001 ; timegen:tgen1|count[5]                ; timegen:tgen1|count[3]               ; clock        ; clock       ; 1.000        ; 0.000      ; 8.741      ;
+; -8.001 ; timegen:tgen1|count[5]                ; timegen:tgen1|count[4]               ; clock        ; clock       ; 1.000        ; 0.000      ; 8.741      ;
+; -8.001 ; timegen:tgen1|count[5]                ; timegen:tgen1|count[5]               ; clock        ; clock       ; 1.000        ; 0.000      ; 8.741      ;
+; -8.001 ; timegen:tgen1|count[5]                ; timegen:tgen1|count[6]               ; clock        ; clock       ; 1.000        ; 0.000      ; 8.741      ;
+; -8.000 ; counter:count1|current_time_ls_min[2] ; counter:count1|current_time_ls_hr[1] ; clock        ; clock       ; 1.000        ; 0.000      ; 8.740      ;
+; -8.000 ; counter:count1|current_time_ls_min[2] ; counter:count1|current_time_ls_hr[2] ; clock        ; clock       ; 1.000        ; 0.000      ; 8.740      ;
+; -8.000 ; counter:count1|current_time_ls_min[2] ; counter:count1|current_time_ls_hr[3] ; clock        ; clock       ; 1.000        ; 0.000      ; 8.740      ;
+; -7.974 ; timegen:tgen1|count[10]               ; timegen:tgen1|count[0]               ; clock        ; clock       ; 1.000        ; 0.000      ; 8.714      ;
+; -7.974 ; timegen:tgen1|count[10]               ; timegen:tgen1|count[1]               ; clock        ; clock       ; 1.000        ; 0.000      ; 8.714      ;
+; -7.974 ; timegen:tgen1|count[10]               ; timegen:tgen1|count[2]               ; clock        ; clock       ; 1.000        ; 0.000      ; 8.714      ;
+; -7.974 ; timegen:tgen1|count[10]               ; timegen:tgen1|count[3]               ; clock        ; clock       ; 1.000        ; 0.000      ; 8.714      ;
+; -7.974 ; timegen:tgen1|count[10]               ; timegen:tgen1|count[4]               ; clock        ; clock       ; 1.000        ; 0.000      ; 8.714      ;
+; -7.974 ; timegen:tgen1|count[10]               ; timegen:tgen1|count[5]               ; clock        ; clock       ; 1.000        ; 0.000      ; 8.714      ;
+; -7.974 ; timegen:tgen1|count[10]               ; timegen:tgen1|count[6]               ; clock        ; clock       ; 1.000        ; 0.000      ; 8.714      ;
+; -7.869 ; timegen:tgen1|count[7]                ; timegen:tgen1|count[0]               ; clock        ; clock       ; 1.000        ; 0.000      ; 8.609      ;
+; -7.869 ; timegen:tgen1|count[7]                ; timegen:tgen1|count[1]               ; clock        ; clock       ; 1.000        ; 0.000      ; 8.609      ;
+; -7.869 ; timegen:tgen1|count[7]                ; timegen:tgen1|count[2]               ; clock        ; clock       ; 1.000        ; 0.000      ; 8.609      ;
++--------+---------------------------------------+--------------------------------------+--------------+-------------+--------------+------------+------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Hold: 'clock'                                                                                                                                               ;
++-------+---------------------------------------+---------------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack ; From Node                             ; To Node                               ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+---------------------------------------+---------------------------------------+--------------+-------------+--------------+------------+------------+
+; 1.733 ; keyreg:keyreg1|key_buffer_ls_hr[3]    ; alarm_reg:alreg1|alarm_time_ls_hr[3]  ; clock        ; clock       ; 0.000        ; 0.000      ; 1.807      ;
+; 1.758 ; keyreg:keyreg1|key_buffer_ms_min[1]   ; alarm_reg:alreg1|alarm_time_ms_min[1] ; clock        ; clock       ; 0.000        ; 0.000      ; 1.832      ;
+; 1.763 ; keyreg:keyreg1|key_buffer_ls_min[1]   ; alarm_reg:alreg1|alarm_time_ls_min[1] ; clock        ; clock       ; 0.000        ; 0.000      ; 1.837      ;
+; 1.828 ; keyreg:keyreg1|key_buffer_ms_hr[2]    ; counter:count1|current_time_ms_hr[2]  ; clock        ; clock       ; 0.000        ; 0.000      ; 1.902      ;
+; 1.828 ; keyreg:keyreg1|key_buffer_ms_hr[3]    ; counter:count1|current_time_ms_hr[3]  ; clock        ; clock       ; 0.000        ; 0.000      ; 1.902      ;
+; 1.990 ; fsm:fsm1|pre_state.SHOW_ALARM         ; fsm:fsm1|pre_state.SHOW_ALARM         ; clock        ; clock       ; 0.000        ; 0.000      ; 2.064      ;
+; 2.015 ; fsm:fsm1|count1[3]                    ; fsm:fsm1|count1[3]                    ; clock        ; clock       ; 0.000        ; 0.000      ; 2.089      ;
+; 2.055 ; keyreg:keyreg1|key_buffer_ms_hr[0]    ; counter:count1|current_time_ms_hr[0]  ; clock        ; clock       ; 0.000        ; 0.000      ; 2.129      ;
+; 2.149 ; keyreg:keyreg1|key_buffer_ms_min[0]   ; alarm_reg:alreg1|alarm_time_ms_min[0] ; clock        ; clock       ; 0.000        ; 0.000      ; 2.223      ;
+; 2.167 ; keyreg:keyreg1|key_buffer_ms_min[2]   ; keyreg:keyreg1|key_buffer_ls_hr[2]    ; clock        ; clock       ; 0.000        ; 0.000      ; 2.241      ;
+; 2.170 ; keyreg:keyreg1|key_buffer_ls_hr[1]    ; keyreg:keyreg1|key_buffer_ms_hr[1]    ; clock        ; clock       ; 0.000        ; 0.000      ; 2.244      ;
+; 2.182 ; keyreg:keyreg1|key_buffer_ls_hr[0]    ; alarm_reg:alreg1|alarm_time_ls_hr[0]  ; clock        ; clock       ; 0.000        ; 0.000      ; 2.256      ;
+; 2.204 ; keyreg:keyreg1|key_buffer_ls_min[3]   ; alarm_reg:alreg1|alarm_time_ls_min[3] ; clock        ; clock       ; 0.000        ; 0.000      ; 2.278      ;
+; 2.287 ; fsm:fsm1|pre_state.KEY_WAITED         ; fsm:fsm1|pre_state.KEY_WAITED         ; clock        ; clock       ; 0.000        ; 0.000      ; 2.361      ;
+; 2.451 ; fsm:fsm1|pre_state.KEY_ENTRY          ; fsm:fsm1|pre_state.SET_ALARM_TIME     ; clock        ; clock       ; 0.000        ; 0.000      ; 2.525      ;
+; 2.803 ; timegen:tgen1|count[7]                ; timegen:tgen1|count[7]                ; clock        ; clock       ; 0.000        ; 0.000      ; 2.877      ;
+; 2.813 ; timegen:tgen1|count[8]                ; timegen:tgen1|count[8]                ; clock        ; clock       ; 0.000        ; 0.000      ; 2.887      ;
+; 2.813 ; timegen:tgen1|count[9]                ; timegen:tgen1|count[9]                ; clock        ; clock       ; 0.000        ; 0.000      ; 2.887      ;
+; 2.828 ; timegen:tgen1|count[6]                ; timegen:tgen1|count[6]                ; clock        ; clock       ; 0.000        ; 0.000      ; 2.902      ;
+; 2.834 ; timegen:tgen1|count[4]                ; timegen:tgen1|count[4]                ; clock        ; clock       ; 0.000        ; 0.000      ; 2.908      ;
+; 2.850 ; counter:count1|current_time_ms_hr[3]  ; counter:count1|current_time_ms_hr[3]  ; clock        ; clock       ; 0.000        ; 0.000      ; 2.924      ;
+; 2.850 ; fsm:fsm1|count1[1]                    ; fsm:fsm1|count1[1]                    ; clock        ; clock       ; 0.000        ; 0.000      ; 2.924      ;
+; 2.850 ; fsm:fsm1|count2[0]                    ; fsm:fsm1|count2[0]                    ; clock        ; clock       ; 0.000        ; 0.000      ; 2.924      ;
+; 2.853 ; fsm:fsm1|count2[1]                    ; fsm:fsm1|count2[1]                    ; clock        ; clock       ; 0.000        ; 0.000      ; 2.927      ;
+; 2.924 ; keyreg:keyreg1|key_buffer_ls_hr[1]    ; alarm_reg:alreg1|alarm_time_ls_hr[1]  ; clock        ; clock       ; 0.000        ; 0.000      ; 2.998      ;
+; 2.928 ; timegen:tgen1|count[10]               ; timegen:tgen1|count[10]               ; clock        ; clock       ; 0.000        ; 0.000      ; 3.002      ;
+; 2.939 ; counter:count1|current_time_ls_hr[0]  ; counter:count1|current_time_ls_hr[0]  ; clock        ; clock       ; 0.000        ; 0.000      ; 3.013      ;
+; 2.948 ; timegen:tgen1|count[12]               ; timegen:tgen1|count[12]               ; clock        ; clock       ; 0.000        ; 0.000      ; 3.022      ;
+; 2.949 ; timegen:tgen1|count[11]               ; timegen:tgen1|count[11]               ; clock        ; clock       ; 0.000        ; 0.000      ; 3.023      ;
+; 2.949 ; timegen:tgen1|count[13]               ; timegen:tgen1|count[13]               ; clock        ; clock       ; 0.000        ; 0.000      ; 3.023      ;
+; 2.952 ; keyreg:keyreg1|key_buffer_ls_min[0]   ; alarm_reg:alreg1|alarm_time_ls_min[0] ; clock        ; clock       ; 0.000        ; 0.000      ; 3.026      ;
+; 2.957 ; timegen:tgen1|count[2]                ; timegen:tgen1|count[2]                ; clock        ; clock       ; 0.000        ; 0.000      ; 3.031      ;
+; 2.958 ; timegen:tgen1|count[3]                ; timegen:tgen1|count[3]                ; clock        ; clock       ; 0.000        ; 0.000      ; 3.032      ;
+; 2.959 ; fsm:fsm1|count2[2]                    ; fsm:fsm1|count2[2]                    ; clock        ; clock       ; 0.000        ; 0.000      ; 3.033      ;
+; 2.959 ; fsm:fsm1|count2[3]                    ; fsm:fsm1|count2[3]                    ; clock        ; clock       ; 0.000        ; 0.000      ; 3.033      ;
+; 2.966 ; timegen:tgen1|count[5]                ; timegen:tgen1|count[5]                ; clock        ; clock       ; 0.000        ; 0.000      ; 3.040      ;
+; 2.967 ; timegen:tgen1|count[1]                ; timegen:tgen1|count[1]                ; clock        ; clock       ; 0.000        ; 0.000      ; 3.041      ;
+; 2.969 ; fsm:fsm1|pre_state.SHOW_TIME          ; fsm:fsm1|pre_state.SHOW_ALARM         ; clock        ; clock       ; 0.000        ; 0.000      ; 3.043      ;
+; 2.969 ; timegen:tgen1|count[0]                ; timegen:tgen1|count[0]                ; clock        ; clock       ; 0.000        ; 0.000      ; 3.043      ;
+; 2.971 ; keyreg:keyreg1|key_buffer_ms_hr[0]    ; alarm_reg:alreg1|alarm_time_ms_hr[0]  ; clock        ; clock       ; 0.000        ; 0.000      ; 3.045      ;
+; 2.971 ; fsm:fsm1|pre_state.SHOW_TIME          ; fsm:fsm1|pre_state.KEY_STORED         ; clock        ; clock       ; 0.000        ; 0.000      ; 3.045      ;
+; 2.975 ; fsm:fsm1|count1[2]                    ; fsm:fsm1|count1[2]                    ; clock        ; clock       ; 0.000        ; 0.000      ; 3.049      ;
+; 2.991 ; counter:count1|current_time_ms_hr[2]  ; counter:count1|current_time_ms_hr[2]  ; clock        ; clock       ; 0.000        ; 0.000      ; 3.065      ;
+; 2.996 ; counter:count1|current_time_ms_hr[0]  ; counter:count1|current_time_ms_hr[0]  ; clock        ; clock       ; 0.000        ; 0.000      ; 3.070      ;
+; 3.005 ; counter:count1|current_time_ms_min[0] ; counter:count1|current_time_ms_min[0] ; clock        ; clock       ; 0.000        ; 0.000      ; 3.079      ;
+; 3.008 ; keyreg:keyreg1|key_buffer_ms_min[3]   ; alarm_reg:alreg1|alarm_time_ms_min[3] ; clock        ; clock       ; 0.000        ; 0.000      ; 3.082      ;
+; 3.022 ; keyreg:keyreg1|key_buffer_ms_hr[2]    ; alarm_reg:alreg1|alarm_time_ms_hr[2]  ; clock        ; clock       ; 0.000        ; 0.000      ; 3.096      ;
+; 3.077 ; counter:count1|current_time_ls_min[0] ; counter:count1|current_time_ls_min[0] ; clock        ; clock       ; 0.000        ; 0.000      ; 3.151      ;
+; 3.100 ; keyreg:keyreg1|key_buffer_ms_min[1]   ; keyreg:keyreg1|key_buffer_ls_hr[1]    ; clock        ; clock       ; 0.000        ; 0.000      ; 3.174      ;
+; 3.116 ; keyreg:keyreg1|key_buffer_ms_min[3]   ; keyreg:keyreg1|key_buffer_ls_hr[3]    ; clock        ; clock       ; 0.000        ; 0.000      ; 3.190      ;
+; 3.140 ; keyreg:keyreg1|key_buffer_ls_min[0]   ; keyreg:keyreg1|key_buffer_ms_min[0]   ; clock        ; clock       ; 0.000        ; 0.000      ; 3.214      ;
+; 3.147 ; keyreg:keyreg1|key_buffer_ls_min[1]   ; keyreg:keyreg1|key_buffer_ms_min[1]   ; clock        ; clock       ; 0.000        ; 0.000      ; 3.221      ;
+; 3.218 ; keyreg:keyreg1|key_buffer_ls_hr[0]    ; counter:count1|current_time_ls_hr[0]  ; clock        ; clock       ; 0.000        ; 0.000      ; 3.292      ;
+; 3.226 ; keyreg:keyreg1|key_buffer_ms_min[0]   ; keyreg:keyreg1|key_buffer_ls_hr[0]    ; clock        ; clock       ; 0.000        ; 0.000      ; 3.300      ;
+; 3.226 ; fsm:fsm1|count1[0]                    ; fsm:fsm1|count1[0]                    ; clock        ; clock       ; 0.000        ; 0.000      ; 3.300      ;
+; 3.236 ; timegen:tgen1|count[2]                ; timegen:tgen1|one_second              ; clock        ; clock       ; 0.000        ; 0.000      ; 3.310      ;
+; 3.348 ; counter:count1|current_time_ls_min[1] ; counter:count1|current_time_ls_min[2] ; clock        ; clock       ; 0.000        ; 0.000      ; 3.422      ;
+; 3.357 ; keyreg:keyreg1|key_buffer_ls_min[1]   ; counter:count1|current_time_ls_min[1] ; clock        ; clock       ; 0.000        ; 0.000      ; 3.431      ;
+; 3.380 ; fsm:fsm1|pre_state.KEY_WAITED         ; fsm:fsm1|pre_state.KEY_ENTRY          ; clock        ; clock       ; 0.000        ; 0.000      ; 3.454      ;
+; 3.386 ; keyreg:keyreg1|key_buffer_ls_min[3]   ; counter:count1|current_time_ls_min[3] ; clock        ; clock       ; 0.000        ; 0.000      ; 3.460      ;
+; 3.411 ; timegen:tgen1|count[3]                ; timegen:tgen1|one_second              ; clock        ; clock       ; 0.000        ; 0.000      ; 3.485      ;
+; 3.476 ; fsm:fsm1|pre_state.KEY_ENTRY          ; fsm:fsm1|pre_state.SET_CURRENT_TIME   ; clock        ; clock       ; 0.000        ; 0.000      ; 3.550      ;
+; 3.477 ; counter:count1|current_time_ms_hr[1]  ; counter:count1|current_time_ms_hr[1]  ; clock        ; clock       ; 0.000        ; 0.000      ; 3.551      ;
+; 3.504 ; keyreg:keyreg1|key_buffer_ms_min[1]   ; counter:count1|current_time_ms_min[1] ; clock        ; clock       ; 0.000        ; 0.000      ; 3.578      ;
+; 3.505 ; fsm:fsm1|pre_state.SHOW_TIME          ; fsm:fsm1|pre_state.SHOW_TIME          ; clock        ; clock       ; 0.000        ; 0.000      ; 3.579      ;
+; 3.524 ; timegen:tgen1|count[7]                ; timegen:tgen1|count[8]                ; clock        ; clock       ; 0.000        ; 0.000      ; 3.598      ;
+; 3.534 ; timegen:tgen1|count[9]                ; timegen:tgen1|count[10]               ; clock        ; clock       ; 0.000        ; 0.000      ; 3.608      ;
+; 3.534 ; timegen:tgen1|count[8]                ; timegen:tgen1|count[9]                ; clock        ; clock       ; 0.000        ; 0.000      ; 3.608      ;
+; 3.540 ; keyreg:keyreg1|key_buffer_ms_min[3]   ; counter:count1|current_time_ms_min[3] ; clock        ; clock       ; 0.000        ; 0.000      ; 3.614      ;
+; 3.555 ; timegen:tgen1|count[4]                ; timegen:tgen1|count[5]                ; clock        ; clock       ; 0.000        ; 0.000      ; 3.629      ;
+; 3.571 ; fsm:fsm1|count1[1]                    ; fsm:fsm1|count1[2]                    ; clock        ; clock       ; 0.000        ; 0.000      ; 3.645      ;
+; 3.571 ; fsm:fsm1|count2[0]                    ; fsm:fsm1|count2[1]                    ; clock        ; clock       ; 0.000        ; 0.000      ; 3.645      ;
+; 3.574 ; fsm:fsm1|count2[1]                    ; fsm:fsm1|count2[2]                    ; clock        ; clock       ; 0.000        ; 0.000      ; 3.648      ;
+; 3.601 ; keyreg:keyreg1|key_buffer_ls_min[2]   ; counter:count1|current_time_ls_min[2] ; clock        ; clock       ; 0.000        ; 0.000      ; 3.675      ;
+; 3.637 ; timegen:tgen1|count[7]                ; timegen:tgen1|count[9]                ; clock        ; clock       ; 0.000        ; 0.000      ; 3.711      ;
+; 3.647 ; timegen:tgen1|count[9]                ; timegen:tgen1|count[11]               ; clock        ; clock       ; 0.000        ; 0.000      ; 3.721      ;
+; 3.647 ; timegen:tgen1|count[8]                ; timegen:tgen1|count[10]               ; clock        ; clock       ; 0.000        ; 0.000      ; 3.721      ;
+; 3.656 ; counter:count1|current_time_ls_min[1] ; counter:count1|current_time_ls_min[3] ; clock        ; clock       ; 0.000        ; 0.000      ; 3.730      ;
+; 3.668 ; timegen:tgen1|count[4]                ; timegen:tgen1|count[6]                ; clock        ; clock       ; 0.000        ; 0.000      ; 3.742      ;
+; 3.674 ; keyreg:keyreg1|key_buffer_ls_hr[3]    ; keyreg:keyreg1|key_buffer_ms_hr[3]    ; clock        ; clock       ; 0.000        ; 0.000      ; 3.748      ;
+; 3.676 ; timegen:tgen1|count[6]                ; timegen:tgen1|one_second              ; clock        ; clock       ; 0.000        ; 0.000      ; 3.750      ;
+; 3.679 ; keyreg:keyreg1|key_buffer_ms_min[2]   ; alarm_reg:alreg1|alarm_time_ms_min[2] ; clock        ; clock       ; 0.000        ; 0.000      ; 3.753      ;
+; 3.684 ; fsm:fsm1|count1[1]                    ; fsm:fsm1|count1[3]                    ; clock        ; clock       ; 0.000        ; 0.000      ; 3.758      ;
+; 3.684 ; fsm:fsm1|count2[0]                    ; fsm:fsm1|count2[2]                    ; clock        ; clock       ; 0.000        ; 0.000      ; 3.758      ;
+; 3.687 ; fsm:fsm1|pre_state.SET_CURRENT_TIME   ; counter:count1|current_time_ls_hr[0]  ; clock        ; clock       ; 0.000        ; 0.000      ; 3.761      ;
+; 3.687 ; fsm:fsm1|count2[1]                    ; fsm:fsm1|count2[3]                    ; clock        ; clock       ; 0.000        ; 0.000      ; 3.761      ;
+; 3.702 ; keyreg:keyreg1|key_buffer_ls_hr[2]    ; alarm_reg:alreg1|alarm_time_ls_hr[2]  ; clock        ; clock       ; 0.000        ; 0.000      ; 3.776      ;
+; 3.716 ; keyreg:keyreg1|key_buffer_ls_min[3]   ; keyreg:keyreg1|key_buffer_ms_min[3]   ; clock        ; clock       ; 0.000        ; 0.000      ; 3.790      ;
+; 3.721 ; keyreg:keyreg1|key_buffer_ls_hr[0]    ; keyreg:keyreg1|key_buffer_ms_hr[0]    ; clock        ; clock       ; 0.000        ; 0.000      ; 3.795      ;
+; 3.749 ; keyreg:keyreg1|key_buffer_ms_hr[1]    ; alarm_reg:alreg1|alarm_time_ms_hr[1]  ; clock        ; clock       ; 0.000        ; 0.000      ; 3.823      ;
+; 3.750 ; timegen:tgen1|count[7]                ; timegen:tgen1|count[10]               ; clock        ; clock       ; 0.000        ; 0.000      ; 3.824      ;
+; 3.752 ; keyreg:keyreg1|key_buffer_ls_hr[2]    ; keyreg:keyreg1|key_buffer_ms_hr[2]    ; clock        ; clock       ; 0.000        ; 0.000      ; 3.826      ;
+; 3.754 ; counter:count1|current_time_ls_min[2] ; counter:count1|current_time_ls_min[2] ; clock        ; clock       ; 0.000        ; 0.000      ; 3.828      ;
+; 3.760 ; timegen:tgen1|count[8]                ; timegen:tgen1|count[11]               ; clock        ; clock       ; 0.000        ; 0.000      ; 3.834      ;
+; 3.780 ; fsm:fsm1|pre_state.SET_CURRENT_TIME   ; counter:count1|current_time_ms_hr[1]  ; clock        ; clock       ; 0.000        ; 0.000      ; 3.854      ;
+; 3.793 ; timegen:tgen1|count[10]               ; timegen:tgen1|count[11]               ; clock        ; clock       ; 0.000        ; 0.000      ; 3.867      ;
+; 3.796 ; fsm:fsm1|pre_state.SET_CURRENT_TIME   ; timegen:tgen1|one_minute_reg          ; clock        ; clock       ; 0.000        ; 0.000      ; 3.870      ;
+; 3.797 ; fsm:fsm1|count2[0]                    ; fsm:fsm1|count2[3]                    ; clock        ; clock       ; 0.000        ; 0.000      ; 3.871      ;
+; 3.813 ; timegen:tgen1|count[12]               ; timegen:tgen1|count[13]               ; clock        ; clock       ; 0.000        ; 0.000      ; 3.887      ;
+; 3.822 ; timegen:tgen1|count[2]                ; timegen:tgen1|count[3]                ; clock        ; clock       ; 0.000        ; 0.000      ; 3.896      ;
++-------+---------------------------------------+---------------------------------------+--------------+-------------+--------------+------------+------------+
+
+
++-------------------------------------------------------------------+
+; Setup Transfers                                                   ;
++------------+----------+----------+----------+----------+----------+
+; From Clock ; To Clock ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++------------+----------+----------+----------+----------+----------+
+; clock      ; clock    ; 1013     ; 0        ; 0        ; 0        ;
++------------+----------+----------+----------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
+
+
++-------------------------------------------------------------------+
+; Hold Transfers                                                    ;
++------------+----------+----------+----------+----------+----------+
+; From Clock ; To Clock ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++------------+----------+----------+----------+----------+----------+
+; clock      ; clock    ; 1013     ; 0        ; 0        ; 0        ;
++------------+----------+----------+----------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
+
+
+---------------
+; Report TCCS ;
+---------------
+No dedicated SERDES Transmitter circuitry present in device or used in design
+
+
+---------------
+; Report RSKM ;
+---------------
+No non-DPA dedicated SERDES Receiver circuitry present in device or used in design
+
+
++------------------------------------------------+
+; Unconstrained Paths Summary                    ;
++---------------------------------+-------+------+
+; Property                        ; Setup ; Hold ;
++---------------------------------+-------+------+
+; Illegal Clocks                  ; 0     ; 0    ;
+; Unconstrained Clocks            ; 0     ; 0    ;
+; Unconstrained Input Ports       ; 8     ; 8    ;
+; Unconstrained Input Port Paths  ; 125   ; 125  ;
+; Unconstrained Output Ports      ; 17    ; 17   ;
+; Unconstrained Output Port Paths ; 216   ; 216  ;
++---------------------------------+-------+------+
+
+
++-------------------------------------+
+; Clock Status Summary                ;
++--------+-------+------+-------------+
+; Target ; Clock ; Type ; Status      ;
++--------+-------+------+-------------+
+; clock  ; clock ; Base ; Constrained ;
++--------+-------+------+-------------+
+
+
++-----------------------------------------------------------------------------------------------------+
+; Unconstrained Input Ports                                                                           ;
++--------------+--------------------------------------------------------------------------------------+
+; Input Port   ; Comment                                                                              ;
++--------------+--------------------------------------------------------------------------------------+
+; alarm_button ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; fastwatch    ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; key[0]       ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; key[1]       ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; key[2]       ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; key[3]       ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; reset        ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; time_button  ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
++--------------+--------------------------------------------------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------+
+; Unconstrained Output Ports                                                                           ;
++--------------+---------------------------------------------------------------------------------------+
+; Output Port  ; Comment                                                                               ;
++--------------+---------------------------------------------------------------------------------------+
+; alarm_sound  ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; ls_hour[0]   ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; ls_hour[1]   ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; ls_hour[2]   ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; ls_hour[3]   ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; ls_minute[0] ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; ls_minute[1] ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; ls_minute[2] ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; ls_minute[3] ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; ms_hour[0]   ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; ms_hour[1]   ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; ms_hour[2]   ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; ms_hour[3]   ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; ms_minute[0] ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; ms_minute[1] ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; ms_minute[2] ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; ms_minute[3] ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
++--------------+---------------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------+
+; Unconstrained Input Ports                                                                           ;
++--------------+--------------------------------------------------------------------------------------+
+; Input Port   ; Comment                                                                              ;
++--------------+--------------------------------------------------------------------------------------+
+; alarm_button ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; fastwatch    ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; key[0]       ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; key[1]       ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; key[2]       ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; key[3]       ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; reset        ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; time_button  ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
++--------------+--------------------------------------------------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------+
+; Unconstrained Output Ports                                                                           ;
++--------------+---------------------------------------------------------------------------------------+
+; Output Port  ; Comment                                                                               ;
++--------------+---------------------------------------------------------------------------------------+
+; alarm_sound  ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; ls_hour[0]   ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; ls_hour[1]   ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; ls_hour[2]   ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; ls_hour[3]   ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; ls_minute[0] ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; ls_minute[1] ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; ls_minute[2] ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; ls_minute[3] ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; ms_hour[0]   ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; ms_hour[1]   ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; ms_hour[2]   ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; ms_hour[3]   ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; ms_minute[0] ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; ms_minute[1] ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; ms_minute[2] ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; ms_minute[3] ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
++--------------+---------------------------------------------------------------------------------------+
+
+
++------------------------------------+
+; TimeQuest Timing Analyzer Messages ;
++------------------------------------+
+Info: *******************************************************************
+Info: Running Quartus Prime TimeQuest Timing Analyzer
+    Info: Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
+    Info: Processing started: Wed Jul 08 11:14:50 2020
+Info: Command: quartus_sta alarm_clock_top -c alarm_clock_top
+Info: qsta_default_script.tcl version: #3
+Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
+Info (20030): Parallel compilation is enabled and will use 2 of the 2 processors detected
+Info (334003): Started post-fitting delay annotation
+Info (334004): Delay annotation completed successfully
+Critical Warning (332012): Synopsys Design Constraints File file not found: 'alarm_clock_top.sdc'. A Synopsys Design Constraints File is required by the TimeQuest Timing Analyzer to get proper timing constraints. Without it, the Compiler will not properly optimize the design.
+Info (332142): No user constrained base clocks found in the design. Calling "derive_clocks -period 1.0"
+Info (332105): Deriving Clocks
+    Info (332105): create_clock -period 1.000 -name clock clock
+Info: Found TIMEQUEST_REPORT_SCRIPT_INCLUDE_DEFAULT_ANALYSIS = ON
+Info: Can't run Report Timing Closure Recommendations. The current device family is not supported.
+Critical Warning (332148): Timing requirements not met
+Info (332146): Worst-case setup slack is -8.667
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):    -8.667            -461.448 clock 
+Info (332146): Worst-case hold slack is 1.733
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):     1.733               0.000 clock 
+Info (332140): No Recovery paths to report
+Info (332140): No Removal paths to report
+Info (332146): Worst-case minimum pulse width slack is -2.289
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):    -2.289              -2.289 clock 
+Info (332001): The selected device family is not supported by the report_metastability command.
+Info (332102): Design is not fully constrained for setup requirements
+Info (332102): Design is not fully constrained for hold requirements
+Info: Quartus Prime TimeQuest Timing Analyzer was successful. 0 errors, 3 warnings
+    Info: Peak virtual memory: 515 megabytes
+    Info: Processing ended: Wed Jul 08 11:15:02 2020
+    Info: Elapsed time: 00:00:12
+    Info: Total CPU time (on all processors): 00:00:10
+
+
